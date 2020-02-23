@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
-import { connect } from 'react-redux';
+import React, { useState } from 'react'
+import { connect } from 'react-redux'
 
-import AddItem from 'components/AddItem';
+import AddItem from 'components/AddItem'
 
 const Home = props => {
-  let { items } = props;
-  const [activeIndex, setactiveIndex] = useState(0);
+  let { items } = props
+  const [activeIndex, setactiveIndex] = useState(0)
 
   return (
     <div className="Home">
@@ -33,11 +33,11 @@ const Home = props => {
         </div>
       )}
     </div>
-  );
-};
+  )
+}
 const mapStateToProps = state => {
   return {
     items: state.itemsReducer.items
-  };
-};
-export default connect(mapStateToProps)(Home);
+  }
+}
+export default connect(mapStateToProps)(Home)

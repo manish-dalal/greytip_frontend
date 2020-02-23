@@ -1,8 +1,8 @@
-import ActionTypes from '../constants/ActionTypes';
+import ActionTypes from '../constants/ActionTypes'
 
 const initialState = {
   name: ''
-};
+}
 
 const userReducer = (state = initialState, action) => {
   switch (action.type) {
@@ -10,16 +10,16 @@ const userReducer = (state = initialState, action) => {
       return {
         ...state,
         ...action.payload
-      };
+      }
 
     case ActionTypes.USER_LOGOUT:
-      localStorage.clear();
+      localStorage.clear()
       return {
         ...initialState
-      };
+      }
     default:
-      return state;
+      return state
   }
-};
+}
 
-export default userReducer;
+export default userReducer

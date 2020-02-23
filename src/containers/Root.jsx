@@ -1,9 +1,9 @@
-import React from 'react';
-import { Route, Redirect, Switch } from 'react-router-dom';
+import React from 'react'
+import { Route, Redirect, Switch } from 'react-router-dom'
 
-import Layout from './layouts/Layout';
-import Home from './Home';
-import AddItem from 'components/AddItem';
+import Layout from './layouts/Layout'
+import Home from './Home'
+import AddItem from 'components/AddItem'
 
 const Root = () => {
   return (
@@ -15,7 +15,7 @@ const Root = () => {
         <Redirect to="/home" />
       </Switch>
     </Layout>
-  );
-};
+  )
+}
 
-export default Root;
+export default Root

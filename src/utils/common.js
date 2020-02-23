@@ -1,8 +1,8 @@
-export const routeMainStack = ['/item-detail', '/profile'];
+export const routeMainStack = ['/item-detail', '/profile']
 
-const d1 = new Date();
-const month = d1.getMonth() + 1;
-const dateString = `${d1.getFullYear()}-${month.toString().padStart(2, '0')}-${d1.getDate()}`;
+const d1 = new Date()
+const month = d1.getMonth() + 1
+const dateString = `${d1.getFullYear()}-${month.toString().padStart(2, '0')}-${d1.getDate()}`
 export const api_response = [
   {
     id: 1582460208558,
@@ -32,7 +32,7 @@ export const api_response = [
     createdDate: dateString,
     keywords: 'keywords, keywords'
   }
-];
+]
 
 export const months = [
   {
@@ -83,4 +83,4 @@ export const months = [
     abbreviation: 'Dec',
     name: 'December'
   }
-];
+]

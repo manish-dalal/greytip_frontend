@@ -1,15 +1,15 @@
-import React from "react";
+import React from 'react'
 
 export const LoadingSpinner = props => {
   const {
     width = 150,
     height = 150,
-    colorFirst = "#1d3f72",
-    colorSecond = "#5699d2",
+    colorFirst = '#1d3f72',
+    colorSecond = '#5699d2',
     strokeWidth = 4,
     radiusFirst = 40,
     radiusSecond = 35
-  } = props;
+  } = props
   return (
     <svg
       width={width}
@@ -17,8 +17,7 @@ export const LoadingSpinner = props => {
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 100 100"
       preserveAspectRatio="xMidYMid"
-      className="lds-double-ring"
-    >
+      className="lds-double-ring">
       <circle
         cx={50}
         cy={50}
@@ -32,8 +31,7 @@ export const LoadingSpinner = props => {
         strokeWidth={strokeWidth}
         stroke={colorFirst}
         strokeDasharray="62.83185307179586 62.83185307179586"
-        transform="rotate(199.69 50 50)"
-      >
+        transform="rotate(199.69 50 50)">
         <animateTransform
           attributeName="transform"
           type="rotate"
@@ -60,8 +58,7 @@ export const LoadingSpinner = props => {
         stroke={colorSecond}
         strokeDasharray="54.97787143782138 54.97787143782138"
         strokeDashoffset="54.97787143782138"
-        transform="rotate(-199.69 50 50)"
-      >
+        transform="rotate(-199.69 50 50)">
         <animateTransform
           attributeName="transform"
           type="rotate"
@@ -74,7 +71,7 @@ export const LoadingSpinner = props => {
         />
       </circle>
     </svg>
-  );
-};
+  )
+}
 
-export default LoadingSpinner;
+export default LoadingSpinner

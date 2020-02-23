@@ -10,6 +10,6 @@ const ActionTypes = {
   CLEAR_ITEMS_LIST: 'CLEAR_ITEMS_LIST',
   SAVE_USER: 'SAVE_USER',
   USER_LOGOUT: 'USER_LOGOUT'
-};
+}
 
-export default ActionTypes;
+export default ActionTypes

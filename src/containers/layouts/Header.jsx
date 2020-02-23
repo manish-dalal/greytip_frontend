@@ -1,45 +1,45 @@
-import React, { useRef, useCallback } from 'react';
-import debounce from 'lodash/debounce';
-import { connect } from 'react-redux';
-import { withRouter } from 'react-router-dom';
-import { Navbar, NavbarBrand, Nav } from 'reactstrap';
+import React, { useRef, useCallback } from 'react'
+import debounce from 'lodash/debounce'
+import { connect } from 'react-redux'
+import { withRouter } from 'react-router-dom'
+import { Navbar, NavbarBrand, Nav } from 'reactstrap'
 
-import Search from 'assets/svg/Search';
-import Cross from 'assets/svg/Cross';
-import getImage from 'utils/images';
-import { getItems, itemsFilterChange, clearItems } from 'redux/actions/Item';
+import Search from 'assets/svg/Search'
+import Cross from 'assets/svg/Cross'
+import getImage from 'utils/images'
+import { getItems, itemsFilterChange, clearItems } from 'redux/actions/Item'
 
 const Header = props => {
   const {
     dispatch,
     filters,
     location: { pathname }
-  } = props;
+  } = props
 
-  const { search = '' } = filters;
-  const myInp = useRef(null);
+  const { search = '' } = filters
+  const myInp = useRef(null)
   function loadData(searchValue) {
-    dispatch(clearItems());
-    dispatch(getItems());
+    dispatch(clearItems())
+    dispatch(getItems())
   }
-  const delayedQuery = useCallback(debounce(loadData, 300), []);
+  const delayedQuery = useCallback(debounce(loadData, 300), [])
 
   const onSearch = event => {
     const {
       target: { value }
-    } = event;
-    dispatch(itemsFilterChange({ search: value, sort: '', order: '', skip: 0 }));
+    } = event
+    dispatch(itemsFilterChange({ search: value, sort: '', order: '', skip: 0 }))
 
-    delayedQuery(value);
-  };
+    delayedQuery(value)
+  }
   const clearSearch = () => {
-    dispatch(itemsFilterChange({ search: '', sort: '', order: '', skip: 0 }));
-    loadData('');
-  };
+    dispatch(itemsFilterChange({ search: '', sort: '', order: '', skip: 0 }))
+    loadData('')
+  }
 
   const moveToHome = () => {
-    props.history.push('/home');
-  };
+    props.history.push('/home')
+  }
 
   return (
     <div className="Header center">
@@ -53,7 +53,7 @@ const Header = props => {
               <div
                 className="search center"
                 onClick={() => {
-                  myInp.current.focus();
+                  myInp.current.focus()
                 }}>
                 <Search className="Header_icon search_icon" />
                 <input
@@ -72,13 +72,13 @@ const Header = props => {
         </Nav>
       </Navbar>
     </div>
-  );
-};
+  )
+}
 const mapStateToProps = state => {
   return {
     filters: state.itemsReducer.filters
-  };
-};
+  }
+}
 
-const HeaderWithRouter = withRouter(props => <Header {...props} />);
-export default connect(mapStateToProps)(HeaderWithRouter);
+const HeaderWithRouter = withRouter(props => <Header {...props} />)
+export default connect(mapStateToProps)(HeaderWithRouter)

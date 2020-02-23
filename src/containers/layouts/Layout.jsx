@@ -1,31 +1,31 @@
-import React, { useEffect } from 'react';
-import { connect } from 'react-redux';
-import { useHistory } from 'react-router-dom';
-import { useDispatch } from 'react-redux';
-import { getItems } from 'redux/actions/Item';
+import React, { useEffect } from 'react'
+import { connect } from 'react-redux'
+import { useHistory } from 'react-router-dom'
+import { useDispatch } from 'react-redux'
+import { getItems } from 'redux/actions/Item'
 
-import Header from './Header';
-import LoadingSpinner from 'components/LoadingSpinner';
-import getImage from 'utils/images';
+import Header from './Header'
+import LoadingSpinner from 'components/LoadingSpinner'
+import getImage from 'utils/images'
 // @ts-ignore
 // import colors from 'assets/css/colors.scss';
 
 // const { theme } = colors;
 
 const Layout = props => {
-  const { loading } = props;
-  const history = useHistory();
-  const dispatch = useDispatch();
+  const { loading } = props
+  const history = useHistory()
+  const dispatch = useDispatch()
   const {
     location: { pathname = '' }
-  } = history;
+  } = history
   useEffect(() => {
-    dispatch(getItems());
+    dispatch(getItems())
     // eslint-disable-next-line
-  }, []);
+  }, [])
   const handleNav = pathname => {
-    history.push({ pathname });
-  };
+    history.push({ pathname })
+  }
   return (
     <React.Fragment>
       <div
@@ -58,12 +58,12 @@ const Layout = props => {
         </div>
       </div>
     </React.Fragment>
-  );
-};
+  )
+}
 
 const mapStateToProps = state => {
   return {
     loading: state.loadingReducer.loadState
-  };
-};
-export default connect(mapStateToProps)(Layout);
+  }
+}
+export default connect(mapStateToProps)(Layout)
