@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/greytip_frontend/static/css/main.7bb4a689.chunk.css",
+    "main.js": "/greytip_frontend/static/js/main.28c57994.chunk.js",
+    "main.js.map": "/greytip_frontend/static/js/main.28c57994.chunk.js.map",
+    "runtime-main.js": "/greytip_frontend/static/js/runtime-main.a75e3443.js",
+    "runtime-main.js.map": "/greytip_frontend/static/js/runtime-main.a75e3443.js.map",
+    "static/css/2.47e06e2e.chunk.css": "/greytip_frontend/static/css/2.47e06e2e.chunk.css",
+    "static/js/2.a70e715a.chunk.js": "/greytip_frontend/static/js/2.a70e715a.chunk.js",
+    "static/js/2.a70e715a.chunk.js.map": "/greytip_frontend/static/js/2.a70e715a.chunk.js.map",
+    "index.html": "/greytip_frontend/index.html",
+    "precache-manifest.7801734160f9ba4e34a49dc66daea6cd.js": "/greytip_frontend/precache-manifest.7801734160f9ba4e34a49dc66daea6cd.js",
+    "service-worker.js": "/greytip_frontend/service-worker.js",
+    "static/css/2.47e06e2e.chunk.css.map": "/greytip_frontend/static/css/2.47e06e2e.chunk.css.map",
+    "static/css/main.7bb4a689.chunk.css.map": "/greytip_frontend/static/css/main.7bb4a689.chunk.css.map",
+    "static/js/2.a70e715a.chunk.js.LICENSE.txt": "/greytip_frontend/static/js/2.a70e715a.chunk.js.LICENSE.txt",
+    "static/media/defaultBg.jpg": "/greytip_frontend/static/media/defaultBg.d4cee3db.jpg",
+    "static/media/logo.png": "/greytip_frontend/static/media/logo.82a318cc.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.a75e3443.js",
+    "static/css/2.47e06e2e.chunk.css",
+    "static/js/2.a70e715a.chunk.js",
+    "static/css/main.7bb4a689.chunk.css",
+    "static/js/main.28c57994.chunk.js"
+  ]
+}
